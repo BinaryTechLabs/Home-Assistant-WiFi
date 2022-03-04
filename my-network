@@ -1,0 +1,28 @@
+[connection]
+id=my-network
+uuid=a7cb6f7e-aea8-41ca-91e9-e3cc814248ea
+type=802-11-wireless
+ 
+[802-11-wireless]
+mode=infrastructure
+ssid=MY_SSID
+# Uncomment below if your SSID is not broadcasted
+#hidden=true
+ 
+# Comment out this section if you have an open/public network that does not use a password
+[802-11-wireless-security]
+auth-alg=open
+key-mgmt=wpa-psk
+psk=MY_WLAN_SECRET_KEY
+ 
+[ipv4]
+method=auto
+# Uncomment below if your using a static IP address and comment out the above method=auto
+# You can set the IP address to what you like
+#method=manual
+#address=192.168.1.111/24;192.168.1.1
+#dns=8.8.8.8;8.8.4.4;
+ 
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto
